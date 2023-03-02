@@ -7,24 +7,25 @@ from selenium.webdriver.common.by import By
 
 class TestLoginUI:
 
-    """@pytest.fixture(scope="function",autouse=True)
-    def configure"""
+    # even if we dont mention scope option also it will take "function" as default because its only scope which works inside class
+    # autouse=true -> to make use of this configure_webbrowser inside all non-static test methods or otherwise we need to individually mention the method name in test emthod-arguments like (self, configure_webbrowser)
+    @pytest.fixture(scope="function",autouse=True)
+    def configure_webbrowser(self):
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(25)
+        self.driver.get("https://opensource-demo.orangehrmlive.com/")
+        yield
+        self.driver.quit()
+
     def test_title(self): # we no need to create object eplicitly, pytest library will take care of creating object thats why we are makins use of "test" as prefix
-        driver=webdriver.Chrome()
-        driver.maximize_window()
-        driver.implicitly_wait(25)
-        driver.get("https://opensource-demo.orangehrmlive.com/")
-        actual_title=driver.title
+        actual_title=self.driver.title
         assert actual_title == "OrangeHRM"
         assert 'HRM' in actual_title # to find the availability of partial text in title
         assert_that("OrangeHRM").is_equal_to(actual_title)
 
     def test_header(self):
-        driver=webdriver.Chrome()
-        driver.maximize_window()
-        driver.implicitly_wait(25)
-        driver.get("https://opensource-demo.orangehrmlive.com/")
-        actual_header=driver.find_element(By.XPATH,"//h5").text
+        actual_header=self.driver.find_element(By.XPATH,"//h5").text
         assert_that("Login").is_equal_to(actual_header)
 
 
