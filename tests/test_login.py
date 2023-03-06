@@ -4,15 +4,7 @@ from assertpy import assert_that
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-class WebDriverWrapper:
-    @pytest.fixture(scope="function", autouse=True)
-    def configure_webbrowser(self):
-        self.driver = webdriver.Chrome()
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(25)
-        self.driver.get("https://opensource-demo.orangehrmlive.com/")
-        yield
-        self.driver.quit()
+from base.webdriver_listener import WebDriverWrapper
 
 class TestLoginUI(WebDriverWrapper):
 
@@ -39,3 +31,11 @@ class TestLogin(WebDriverWrapper):
         self.driver.find_element(By.XPATH,"//button[@type='submit']").click()
         actual_header = self.driver.find_element(By.XPATH, "//h6").text
         assert_that("Dashboard").is_equal_to(actual_header)
+
+    def test_invalid_login(self):
+        print("InValid login")
+        self.driver.find_element(By.NAME,"username").send_keys("Admin123")
+        self.driver.find_element(By.NAME,"password").send_keys("admin003")
+        self.driver.find_element(By.XPATH,"//button[@type='submit']").click()
+        actual_error = self.driver.find_element(By.XPATH, "//p[text()='Invalid credentials']").text
+        assert_that("Invalid credentials").is_equal_to(actual_error)
