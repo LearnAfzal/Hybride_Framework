@@ -29,3 +29,20 @@ class TestLoginUI:
         assert_that("Login").is_equal_to(actual_header)
 
 
+class TestLogin:
+    @pytest.fixture(scope="function", autouse=True)
+    def configure_webbrowser(self):
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(25)
+        self.driver.get("https://opensource-demo.orangehrmlive.com/")
+        yield
+        self.driver.quit()
+
+    def test_valid_login(self):
+        print("Valid login")
+        self.driver.find_element(By.NAME,"username").send_keys("Admin")
+        self.driver.find_element(By.NAME,"password").send_keys("admin123")
+        self.driver.find_element(By.XPATH,"//button[@type='submit']").click()
+        actual_header = self.driver.find_element(By.XPATH, "//h6").text
+        assert_that("Dashboard").is_equal_to(actual_header)
