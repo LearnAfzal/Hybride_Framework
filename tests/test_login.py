@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from base.webdriver_listener import WebDriverWrapper
+from utilities.test_invalid_login_data import data_source
 
 class TestLoginUI(WebDriverWrapper):
 
@@ -38,10 +39,7 @@ class TestLogin(WebDriverWrapper):
         actual_header = self.driver.find_element(By.XPATH, "//h6").text
         assert_that("Dashboard").is_equal_to(actual_header)
 
-    @pytest.mark.parametrize("username,password,expected_error",[
-        ("john","john123","Invalid credentials"),
-        ("jack","jack123","Invalid credentials")
-    ])
+    @pytest.mark.parametrize("username,password,expected_error",data_source) #pick the data from some other package->module
     def test_invalid_login(self,username,password,expected_error):
         print("InValid login")
         self.driver.find_element(By.NAME,"username").send_keys(username)
