@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fe615ae-d10e-4f68-9112-8413e368f7ee" name="Changes" comment="Added WebDriverWrapper browser configuration">
-      <change afterPath="$PROJECT_DIR$/base/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/webdriver_listener.py" afterDir="false" />
+    <list default="true" id="1fe615ae-d10e-4f68-9112-8413e368f7ee" name="Changes" comment="Added Invalid login test method">
+      <change afterPath="$PROJECT_DIR$/utilities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/test_invalid_login_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hybrid_framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hybrid_framework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
     </list>
@@ -31,36 +32,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/153192/OneDrive - Arrow Electronics, Inc/Desktop/Python Training/Practice/selenium_project&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/153192/OneDrive - Arrow Electronics, Inc/Desktop/Python Training/Practice/selenium_project",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python tests.Python tests for test_login.TestLogin.test_invalid_login">
-    <configuration name="day9_task1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="selenium_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../selenium_project/assignments" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../selenium_project/assignments/day9_task1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="day9_task2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="selenium_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,6 +76,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_login.TestLoginUI.test_login_placeholders" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="hybrid_framework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.TestLoginUI.test_login_placeholders&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_login.TestLogin.test_invalid_login" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="hybrid_framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,10 +121,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_login.TestLogin.test_invalid_login" />
+        <item itemvalue="Python tests.Python tests for test_login.TestLoginUI.test_login_placeholders" />
         <item itemvalue="Python tests.Python tests for test_login.TestLogin" />
         <item itemvalue="Python tests.Python tests for test_login.TestLogin.test_valid_login" />
         <item itemvalue="Python.day9_task2" />
-        <item itemvalue="Python.day9_task1" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678083142424</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Invalid login test method">
+      <created>1678086591482</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678086591482</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +191,7 @@
     <MESSAGE value="Added Fixture decorator with scope as function &amp; autofocus as true" />
     <MESSAGE value="Added new class for inheritence" />
     <MESSAGE value="Added WebDriverWrapper browser configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added WebDriverWrapper browser configuration" />
+    <MESSAGE value="Added Invalid login test method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Invalid login test method" />
   </component>
 </project>
