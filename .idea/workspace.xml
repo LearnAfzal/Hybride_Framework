@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fe615ae-d10e-4f68-9112-8413e368f7ee" name="Changes" comment="Parametrize concept1">
+    <list default="true" id="1fe615ae-d10e-4f68-9112-8413e368f7ee" name="Changes" comment="Parametrize concept2_Fetch data from other package">
+      <change afterPath="$PROJECT_DIR$/tests/test_employee.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/test_invalid_login_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/test_invalid_login_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/test_invalid_login_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/data_source.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,27 +31,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/153192/OneDrive - Arrow Electronics, Inc/Desktop/Python Training/Practice/selenium_project",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/153192/OneDrive - Arrow Electronics, Inc/Desktop/Python Training/Practice/selenium_project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for test_login.TestLogin.test_invalid_login">
-    <configuration name="Python tests for test_login.TestLogin" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Python tests.pytest for test_employee.TestAddEmployee.test_add_valid_employee">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="hybrid_framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login.TestLogin&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_login.TestLoginUI.test_login_placeholders" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -81,7 +89,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_login.TestLogin.test_valid_login" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_employee.TestAddEmployee.test_add_valid_employee" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="hybrid_framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,8 +98,10 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login.TestLogin.test_valid_login&quot;" />
+      <option name="_new_target" value="&quot;test_employee.TestAddEmployee.test_add_valid_employee&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -113,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_employee.TestAddEmployee.test_add_valid_employee" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python tests.Python tests for test_login.TestLogin.test_invalid_login" />
         <item itemvalue="Python tests.pytest for test_login.test_invalid_login" />
         <item itemvalue="Python tests.Python tests for test_login.TestLoginUI.test_login_placeholders" />
-        <item itemvalue="Python tests.Python tests for test_login.TestLogin" />
-        <item itemvalue="Python tests.Python tests for test_login.TestLogin.test_valid_login" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678168684090</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Parametrize concept2_Fetch data from other package">
+      <created>1678169110621</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678169110621</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +210,7 @@
     <MESSAGE value="Added WebDriverWrapper browser configuration" />
     <MESSAGE value="Added Invalid login test method" />
     <MESSAGE value="Parametrize concept1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parametrize concept1" />
+    <MESSAGE value="Parametrize concept2_Fetch data from other package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parametrize concept2_Fetch data from other package" />
   </component>
 </project>
