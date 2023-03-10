@@ -1,7 +1,7 @@
 """just created to understand how to read csv, excel, json"""
 import pandas
 df=pandas.read_csv(filepath_or_buffer="../test_data/test_invalid_login_data.csv",delimiter=",")
-print(df)
+print(df) # by default 1st row is always consider as header
 
 print(df.loc[0])
 
