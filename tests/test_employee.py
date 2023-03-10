@@ -24,8 +24,8 @@ class TestAddEmployee(WebDriverWrapper):
         self.driver.find_element(By.NAME, "middleName").send_keys(middlename)
         self.driver.find_element(By.NAME, "lastName").send_keys(lastname)
         self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
-        actual_name = self.driver.find_element(By.XPATH, f"//h6[contains(normalize-space(),'{firstname}')]").text
+        actual_name = self.driver.find_element(By.XPATH, f"//h6[contains(normalize-space(),'{firstname}')]").text #to handle dynammic xpath based on firstname
         assert_that(actual_header).is_equal_to(actual_name)
         time.sleep(5)
-        actual_fname = self.driver.find_element(By.NAME, "firstName").get_attribute("value") # this value attribute is not visible in inspect element but for all the input fields it will be there
+        actual_fname = self.driver.find_element(By.NAME, "firstName").get_attribute("value") # this value attribute is not visible in inspect element but for all the input fields it will be there(hidden element)
         assert_that(actual_first_name).is_equal_to(actual_fname)
